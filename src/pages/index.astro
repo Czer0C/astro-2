@@ -4,9 +4,8 @@ import "../styles/global.css"
 import Button from "../components/Button.astro"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import Image from "astro/components/Image.astro"
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import img1 from "/public/ttgl.avif"
+import img2 from "/public/profile.png"
 ---
 
 <html lang='en'>
@@ -22,19 +21,21 @@ import Image from "astro/components/Image.astro"
     <div class='grid place-items-center h-screen content-center'>
       <Button>Tailwind Button in Astro!</Button>
 
-      <AspectRatio ratio={16 / 9} className='bg-muted rounded-lg'>
-        <Image
-          src='/ttgl.avif'
-          alt='Photo by Drew Beamer'
-          class='h-full w-full rounded-lg object-cover dark:brightness-[0.2] dark:grayscale'
-          width={800}
-          height={450}
-        />
-      </AspectRatio>
+      <div class='w-200'>
+        <AspectRatio ratio={16 / 9} className='bg-muted rounded-lg'>
+          <Image
+            src={img1}
+            alt='Photo by Drew Beamer'
+            class='h-full w-full rounded-lg object-cover dark:brightness-[0.2] dark:grayscale'
+            width={800}
+            height={450}
+          />
+        </AspectRatio>
+      </div>
 
-      <div class='size-72'>
+      <div class='size-32'>
         <Image
-          src='/profile.png'
+          src={img2}
           alt='Profile'
           class='h-full w-full rounded-lg object-cover dark:brightness-[0.2] dark:grayscale'
           width={128}
