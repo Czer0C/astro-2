@@ -32,6 +32,16 @@ import Image from "astro/components/Image.astro"
         />
       </AspectRatio>
 
+      <div class='size-72'>
+        <Image
+          src='/profile.png'
+          alt='Profile'
+          class='h-full w-full rounded-lg object-cover dark:brightness-[0.2] dark:grayscale'
+          width={128}
+          height={128}
+        />
+      </div>
+
       <a href='/markdown-page' class='p-4 underline'
         >Markdown is also supported...</a
       >
