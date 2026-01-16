@@ -1,0 +1,20 @@
+---
+import { Button } from "@/components/ui/button"
+import { NavigationMenuDemo } from "@/components/nav-demo"
+import "../styles/global.css"
+const { content } = Astro.props
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <title>{content.title}</title>
+  </head>
+  <body>
+    <NavigationMenuDemo client:only />
+    <Button className='m-20'> Test shadcn button </Button>
+    <slot />
+  </body>
+</html>
